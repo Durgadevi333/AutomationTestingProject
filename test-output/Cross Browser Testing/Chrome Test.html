@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Chrome Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>5/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Mar 11 15:37:53 IST 2026</td>
+<td>Started on:</td><td>Thu Mar 12 19:41:10 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>72 seconds (72877 ms)</td>
+<tr><td>Total time:</td><td>508 seconds (508256 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,31 +76,19 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='org.project.TestNgProject.test1()'><b>test1</b><br>Test class: org.project.TestNgProject<br>Parameters: chrome, AF05088924, dur123, Durga, Devi, durgadevirajendran33@gmail.com, ANP_D4432</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable, but the element was not visible.
-(tried for 15 seconds with 500 milliseconds interval)
-Build info: version: &apos;4.40.0&apos;, revision: &apos;b3333f1&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\ganes\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50396}, goog:processID: 25620, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50396/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: db60a905179a3f2bace1fc1ebdfefbc2
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-	at org.project.BaseClass.waitAndClick(BaseClass.java:60)
-	at org.project.TestNgProject.test1(TestNgProject.java:181)
+<td title='org.project.LoginUserTest.test2()'><b>test2</b><br>Test class: org.project.LoginUserTest<br>Parameters: AF05088924, dur123</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	URL Mismatch forx.com,
+	URL Mismatch forlinkedin
+	at org.project.LoginUserTest.test2(LoginUserTest.java:274)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1303773766", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1303773766'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable, but the element was not visible.
-(tried for 15 seconds with 500 milliseconds interval)
-Build info: version: &apos;4.40.0&apos;, revision: &apos;b3333f1&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\ganes\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50396}, goog:processID: 25620, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50396/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: db60a905179a3f2bace1fc1ebdfefbc2
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-	at org.project.BaseClass.waitAndClick(BaseClass.java:60)
-	at org.project.TestNgProject.test1(TestNgProject.java:181)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace866901553", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace866901553'><pre>java.lang.AssertionError: The following asserts failed:
+	URL Mismatch forx.com,
+	URL Mismatch forlinkedin
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at org.project.LoginUserTest.test2(LoginUserTest.java:274)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -128,8 +116,8 @@ Session ID: db60a905179a3f2bace1fc1ebdfefbc2
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>68</td>
-<td>org.project.TestNgProject@40a4337a</td></tr>
+<td>312</td>
+<td>org.project.LoginUserTest@1f2586d6</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -140,10 +128,30 @@ Session ID: db60a905179a3f2bace1fc1ebdfefbc2
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='org.project.TestNgProject.test1()'><b>test1</b><br>Test class: org.project.TestNgProject<br>Parameters: chrome, 3333, dur123, , , , </td>
+<td title='org.project.LoginUserTest.test1()'><b>test1</b><br>Test class: org.project.LoginUserTest<br>Parameters: AF05088924, 982q, , , , </td>
 <td></td>
-<td>4</td>
-<td>org.project.TestNgProject@40a4337a</td></tr>
+<td>1</td>
+<td>org.project.LoginUserTest@1f2586d6</td></tr>
+<tr>
+<td title='org.project.LoginUserTest.test1()'><b>test1</b><br>Test class: org.project.LoginUserTest<br>Parameters: =$de, 3dw, , , , </td>
+<td></td>
+<td>1</td>
+<td>org.project.LoginUserTest@1f2586d6</td></tr>
+<tr>
+<td title='org.project.LoginUserTest.test1()'><b>test1</b><br>Test class: org.project.LoginUserTest<br>Parameters: AF05088924, dur123, Durga, Devi, durgadevirajendran33@gmail.com,  </td>
+<td></td>
+<td>133</td>
+<td>org.project.LoginUserTest@1f2586d6</td></tr>
+<tr>
+<td title='org.project.LoginUserTest.test1()'><b>test1</b><br>Test class: org.project.LoginUserTest<br>Parameters: 3333, dur123, , , , </td>
+<td></td>
+<td>1</td>
+<td>org.project.LoginUserTest@1f2586d6</td></tr>
+<tr>
+<td title='org.project.LoginUserTest.test1()'><b>test1</b><br>Test class: org.project.LoginUserTest<br>Parameters:  ,  , , , , </td>
+<td></td>
+<td>1</td>
+<td>org.project.LoginUserTest@1f2586d6</td></tr>
 </table><p>
 </body>
 </html>

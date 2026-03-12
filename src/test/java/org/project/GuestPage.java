@@ -1,14 +1,13 @@
 package org.project;
 
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class GuestPage extends BaseClass{
-	public  GuestPage(WebDriver driver) {
-		this.driver = driver;
+	public  GuestPage() {
         PageFactory.initElements(driver, this);
 	}
 	@FindBy(xpath="//button[text()='Log in as a guest']")
@@ -26,15 +25,6 @@ public class GuestPage extends BaseClass{
 	public WebElement getCourse() {
 		return course;
 	}
-//	// Add this to your GuestPage class
-//	@FindBy(xpath = "//button[@aria-controls='nav-drawer']")
-//	private WebElement menuBtn;
-
-//	@FindBy(xpath="//span[text()='Calendar']")
-//	private WebElement calendar;
-//	public WebElement getCalendar() {
-//		return calendar;
-//	}
 	
 	@FindBy(xpath="//a[text()='www.anudip.org']")
 	private WebElement web;
@@ -90,5 +80,10 @@ public class GuestPage extends BaseClass{
 	private WebElement forgetSearch;
 	public WebElement getForgetSearch() {
 		return forgetSearch;
+	}
+	@FindBy(xpath="//a[text()='Log in']")
+	private WebElement guestLogin;
+	public WebElement getGuestLogin() {
+		return guestLogin;
 	}
 }

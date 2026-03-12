@@ -2,6 +2,7 @@ package org.project;
 
 import java.io.File;
 
+
 import java.io.IOException;
 import java.time.Duration;
 
@@ -21,7 +22,7 @@ import org.testng.annotations.AfterMethod;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseClass {
-	public static WebDriver driver; 
+	static WebDriver driver; 
 
     public void browserLaunch(String browser) {
         if(browser.equalsIgnoreCase("chrome")) {
@@ -29,7 +30,7 @@ public class BaseClass {
           driver = new ChromeDriver();
         } 
         else if(browser.equalsIgnoreCase("edge")) {
-            WebDriverManager.chromedriver().setup(); 
+            WebDriverManager.edgedriver().setup(); 
             driver = new EdgeDriver();
         } 
         else if(browser.equalsIgnoreCase("firefox")) {
@@ -54,8 +55,6 @@ public class BaseClass {
     	
     }
     public void waitAndClick(WebElement element) {
-
-        // 1. We use WebDriverWait to handle the TIMING
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
         wait.until(ExpectedConditions.elementToBeClickable(element));
         jsClick(element);
@@ -78,8 +77,8 @@ public class BaseClass {
   
     }
     
-//    @AfterMethod
-//    public void driverQuit() {
-//    	driver.quit();
-//    }
+    @AfterMethod
+    public void driverQuit() {
+    	driver.quit();
+    }
 }

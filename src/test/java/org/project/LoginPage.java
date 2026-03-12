@@ -1,14 +1,11 @@
 package org.project;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage{
-	WebDriver driver;
-	public LoginPage(WebDriver driver) {
-		this.driver=driver;
+public class LoginPage extends BaseClass{
+	public LoginPage() {	
 		PageFactory.initElements(driver,this);;
 	}
 	@FindBy(id="username")
@@ -23,6 +20,7 @@ public class LoginPage{
 	}
 	@FindBy(xpath="//input[@name='rememberusername']")
 	private WebElement remember;
+	
 	public WebElement getremember() {
 		return remember;
 	}

@@ -1,8 +1,8 @@
 package org.project;
 
 import org.openqa.selenium.JavascriptExecutor;
+
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -10,10 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class DashBoardPage extends BaseClass {
 	
-	WebDriver driver;
-
-	public DashBoardPage(WebDriver driver) {
-        this.driver = driver;
+	public DashBoardPage() {
         PageFactory.initElements(driver, this);
     }
 
@@ -115,7 +112,13 @@ public class DashBoardPage extends BaseClass {
     public WebElement getcustomize() {
         return customize;
     }
-
+    
+    @FindBy(id="sidepreopen-control")
+    private WebElement arrow;
+    public WebElement getArrow() {
+    	return arrow;
+    }
+    
     @FindBy(xpath = "//button[contains(text(),'Reset page')]")
     private WebElement reset;
     public WebElement getReset() {
@@ -133,30 +136,14 @@ public class DashBoardPage extends BaseClass {
     public WebElement getStart() {
         return start;
     }
-
-//    @FindBy(xpath = "//a[text()='To item \"Recently accessed courses\"']")
-//    private WebElement move;
-//
-//    public WebElement getMove() {
-//        return move;
-//    }
-    
-//    //for dropdown, use this actions
-//    public void moveBlock(int times) {
-//        getStart().click();
-//        Actions act = new Actions(driver);
-//        for (int i = 0; i < times; i++) {
-//            act.sendKeys(Keys.DOWN).perform();
-//        }
-//        JavascriptExecutor js = (JavascriptExecutor) driver;
-//        js.executeScript("arguments[0].click()", getMove());
-//    }
     
     public void moveBlock(int times) {
         waitAndClick(getStart()); 
+        
         Actions act = new Actions(driver);
         for (int i = 0; i < times; i++) {
             act.sendKeys(Keys.DOWN).perform();
+        
         }
         act.sendKeys(Keys.ENTER).perform();
     }
@@ -172,5 +159,6 @@ public class DashBoardPage extends BaseClass {
     public void getGrade() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].click();", grade);
+        
     }
 }

@@ -3,10 +3,13 @@
 <suite name="Cross Browser Testing" thread-count="3">
 
    
-   <test name="Chrome Test">
+   
+     <test name="Chrome Test">
         <parameter name="browser" value="chrome"/>
+        <parameter name="username" value="AF05088924"/>
+        <parameter name="password" value="dur123"/>
         <classes>
-            <class name="org.project.TestNgProject"/>
+            <class name="org.project.LoginUserTest"/>
         </classes>
     </test>
  
